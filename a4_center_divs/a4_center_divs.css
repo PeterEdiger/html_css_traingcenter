@@ -1,0 +1,61 @@
+/*The asteriks in CSS applies a style to all elements*/
+
+
+/* ---------------- Case1 comment out to not show ----------------- */
+
+body {
+    margin: 0
+}
+
+#parentContainer {
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    background-color: #f55353;
+}
+
+#childContainer {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: #feb139;
+}
+
+/***************** Case1 Finish*****************/
+
+/***************** Centering Case1*****************/
+
+#parentContainer {
+    position: relative;
+}
+
+#childContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*Pushes the element in the opposite direction 50% of object size*/
+    /*Here 50px left, 50px down. This way it gets centered*/
+    transform: translate(-50%, -50%);
+}
+
+/*****************Centering Case1 part2*****************/
+
+/*#parentContainer {*/
+/*  position: relative;*/
+/*}*/
+/*#childContainer {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  right: 0;*/
+/*  margin: auto;*/
+/*}*/
+
+
+
+
+
+
+
+
