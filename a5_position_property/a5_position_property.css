@@ -1,0 +1,75 @@
+/* static position = normal HTML flow from top to bottom*/
+
+/* relative position = Same as static position the  only difference,
+it is possible to change (top, right, bottom, left) positions*/
+body {
+    margin: 30px;
+}
+
+h3 {
+    margin: 0;
+    /*position: absolute;*/
+}
+
+.parent {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    background-color: #9336B4;
+}
+
+.child-one {
+    margin-top: 10px;
+    width: 450px;
+    height: 50px;
+    background-color: #ECE5C7;
+}
+
+.child-two {
+    position: absolute;
+    /*With position absolute we remove the Element from the document flow.*/
+    /*It stays on same position but is out of document flow*/
+    /*top, right, bottom, left positions it absolutely to the
+    next upper position other than static, or in highest order
+    to the html element itself.*/
+    width: 100px;
+    height: 50px;
+    background-color: #00DFA2;
+}
+
+.child-three {
+    width: 450px;
+    height: 50px;
+    background-color: #00C4FF;
+}
+
+.child-four {
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    background-color: #00C4FF;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+
+.child-margins {
+    margin-left: 20px;
+}
+
+.parent-margins {
+    margin-top: 30px;
+}
+
+.border-content{
+    border: solid 2px;
+}
+
+.text-middle-child{
+    text-align: center;
+    line-height: 50px;
+}
