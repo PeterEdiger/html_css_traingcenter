@@ -33,8 +33,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+
     /*Pushes the element in the opposite direction 50% of object size*/
-    /*Here 50px left, 50px down. This way it gets centered*/
+    /*Here 50px left, 50px up. This way it gets centered*/
     transform: translate(-50%, -50%);
 }
 
