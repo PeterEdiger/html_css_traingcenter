@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="play_css.css">
+
+</head>
+<body>
+<div id="targetField">
+    <div id="cornerField"
+         style="background-color:black">
+        <button id="target"
+                style="left:20px; top:20px"
+                onclick="myFunction()">Click Me!
+        </button>
+    </div>
+</div>
+
+<script>
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function myFunction() {
+  console.log("click")
+  let t = document.getElementById("target");
+  t.style.fontSize = "25px";
+  t.style.color = "red";
+  let x=getRandomInt(100)
+  let y=getRandomInt(100)
+  console.log(x)
+  t.style.left = x+"%";
+  t.style.top = y+"%";
+}
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
