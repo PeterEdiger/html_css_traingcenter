@@ -7,32 +7,70 @@
 
 </head>
 <body>
-<div id="targetField">
-    <div id="cornerField"
-         style="background-color:black">
+<nav>
+    <button onclick="swapStartStop(2000)"
+            id="start-stop"
+            style="left:20px; top:20px">
+        Start/Stop!
+    </button>
+    <input type="text" oninput="in()">
+</nav>
+<section id="target_no_catch">
+</section>
+<div id="target_catch">
+</div>
+<main id="targetField">
+    <div id="cornerField">
         <button id="target"
                 style="left:20px; top:20px"
-                onclick="myFunction()">Click Me!
+                onclick="targetCatch()">Click Me!
         </button>
     </div>
-</div>
+</main>
 
 <script>
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+function in(){
+    console.log("AHA")
+}
+function swapStartStop(interval) {
+    if(timeInterval==undefined){
+        timeInterval=setInterval(move,interval);
+        buttonStartStop.innerText="Stop "
+    }
+    else{
+        clearInterval(timeInterval);
+        timeInterval=undefined;
+        buttonStartStop.innerText="Start"
+    }
 
-function myFunction() {
-  console.log("click")
-  let t = document.getElementById("target");
-  t.style.fontSize = "25px";
-  t.style.color = "red";
+  }
+
+function move(){
+  t.style.backgroundColor = noCatchColor;
   let x=getRandomInt(100)
   let y=getRandomInt(100)
-  console.log(x)
   t.style.left = x+"%";
-  t.style.top = y+"%";
+  t.style.top = y+"%" ;
 }
+
+function targetCatch(){
+  t.style.backgroundColor = catchColor;
+}
+
+timeInterval=undefined;
+let t = document.getElementById("target");
+let buttonStartStop = document.getElementById("start-stop");
+
+element=document.getElementById("target_no_catch");
+noCatchColor=getComputedStyle(element).backgroundColor;
+
+element=document.getElementById("target_catch");
+catchColor=getComputedStyle(element).backgroundColor;
+
 
 
 
